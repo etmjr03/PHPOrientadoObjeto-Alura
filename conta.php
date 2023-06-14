@@ -1,5 +1,9 @@
 <?php 
 
-require_once './src/criar-conta.php';
+require_once './functions/criar-conta.php';
+require_once './class/Conta.php';
 
-$conta = criarConta(1, 'juninho', 3000.00);
+$primeiraConta = new Conta();
+$primeiraConta->idConta = 1;
+$primeiraConta->nome = 'juninho';
+$primeiraConta->saldo = '3000';

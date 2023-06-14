@@ -56,9 +56,9 @@
 
         <div class="row">
             <?php 
-                echo '<pre>';
-                print_r($conta);
-                echo '</pre>';
+                foreach($primeiraConta as $chave => $i) {
+                    echo "$chave: $i <br>";
+                }
             ?>
         </div>
     </div>
