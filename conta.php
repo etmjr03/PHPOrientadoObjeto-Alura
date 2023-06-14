@@ -6,7 +6,7 @@ require_once './class/Conta.php';
 $primeiraConta = new Conta();
 $primeiraConta->idConta = 1;
 $primeiraConta->nome = 'juninho';
-$primeiraConta->saldo = '3000';
+$primeiraConta->depositar(3000);
 
 $segundaConta = new Conta();
 $segundaConta->idConta = 2;

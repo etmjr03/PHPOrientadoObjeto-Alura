@@ -55,6 +55,17 @@
         </div>
 
         <div class="row">
+        <?php 
+            echo '<pre>';
+            print_r($primeiraConta);
+            echo '</pre>';
+
+            echo '<pre>';
+            print_r($segundaConta);
+            echo '</pre>';
+        ?>
+        </div>
+        <div class="row">
             <ul class="text-center">
                 <li class="text-center">
                     <?php $primeiraConta->sacar(1000); ?>
@@ -76,6 +87,8 @@
             echo '<pre>';
             print_r($segundaConta);
             echo '</pre>';
+
+            echo "O nome é {$primeiraConta->getNome()} e o saldo é: {$primeiraConta->getSaldo()}";
         ?>
     </div>
     </div>
