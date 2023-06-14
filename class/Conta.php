@@ -3,7 +3,13 @@
 class Conta {
     private int $idConta;
     private string $nome;
-    private float $saldo = 0;
+    private float $saldo;
+
+    public function __construct(int $idConta, string $nome) {
+        $this->idconta = $idConta;
+        $this->nome = $nome;
+        $this->saldo = 0;
+    }
 
     public function sacar(float $valorSaque): void {
         if($valorSaque > $this->saldo) {
@@ -33,8 +39,8 @@ class Conta {
             echo "Transferência realizada com sucesso! <br>";
     }
 
-    public function getIdConta(): int {
-        return $this->idConta;
+    public function getIdConta(): int{
+        return $this->idconta;
     }
 
     public function getNome(): string {
@@ -43,14 +49,6 @@ class Conta {
 
     public function getSaldo(): float {
         return $this->saldo;
-    }
-
-    public function setIdConta(int $idConta): void {
-        $this->idConta = $idConta;
-    }
-
-    public function setNome(string $nome): void {
-        $this->nome = $nome;
     }
 
     public function setSaldo(float $saldo): void {

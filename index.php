@@ -90,6 +90,20 @@
 
             echo "O nome da primeira conta é {$primeiraConta->getNome()} e o saldo é: {$primeiraConta->getSaldo()} <br>";
             echo "O nome da segunda conta é {$segundaConta->getNome()} e o saldo é: {$segundaConta->getSaldo()} <br>";
+
+            $contas = [
+                $primeiraConta,
+                $segundaConta,
+                $terceiraConta
+            ];
+
+            echo '<h4 class="text-center">Contas disponiveis no sistema</h4>';
+
+            foreach($contas as $key) {
+                echo "<li>O usuário da conta com id = {$key->getIdConta()}
+                de nome {$key->getNome()} 
+                tem um saldo de = {$key->getSaldo()}<li>";
+            }
         ?>
     </div>
     </div>

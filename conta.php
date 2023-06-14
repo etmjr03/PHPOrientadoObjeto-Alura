@@ -3,12 +3,9 @@
 require_once './functions/criar-conta.php';
 require_once './class/Conta.php';
 
-$primeiraConta = new Conta();
-$primeiraConta->setIdConta(1);
-$primeiraConta->setNome('juninho');
+$primeiraConta = new Conta(1, 'juninho');
 $primeiraConta->depositar(3000);
 
-$segundaConta = new Conta();
-$segundaConta->setIdConta(2);
-$segundaConta->setNome('juliana');
-$segundaConta->depositar(1000);
+$segundaConta = new Conta(2, 'juliana');
+
+$terceiraConta = new Conta(3, 'ana');
