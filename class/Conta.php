@@ -9,6 +9,7 @@ class Conta {
         $this->idconta = $idConta;
         $this->nome = $nome;
         $this->saldo = 0;
+        $this->verificarNome();
     }
 
     public function sacar(float $valorSaque): void {
@@ -53,5 +54,13 @@ class Conta {
 
     public function setSaldo(float $saldo): void {
         $this->saldo = $saldo;
+    }
+
+    private function verificarNome() {
+        if(strlen($this->nome) < 5) {
+            echo '<p class="text-center" style="color: #ee0505"> não é um nome permitido, seu sobrenome e nome deve
+            ter pelo menos 5 letras!</p>';
+            exit;
+        }
     }
 }
