@@ -1,8 +1,8 @@
 <?php
 
 class Conta {
-    public int $idConta;
-    public string $nome;
+    private int $idConta;
+    private string $nome;
     private float $saldo = 0;
 
     public function sacar(float $valorSaque): void {
@@ -43,5 +43,17 @@ class Conta {
 
     public function getSaldo(): float {
         return $this->saldo;
+    }
+
+    public function setIdConta(int $idConta): void {
+        $this->idConta = $idConta;
+    }
+
+    public function setNome(string $nome): void {
+        $this->nome = $nome;
+    }
+
+    public function setSaldo(float $saldo): void {
+        $this->saldo = $saldo;
     }
 }

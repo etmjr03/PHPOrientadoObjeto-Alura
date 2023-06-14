@@ -88,7 +88,8 @@
             print_r($segundaConta);
             echo '</pre>';
 
-            echo "O nome é {$primeiraConta->getNome()} e o saldo é: {$primeiraConta->getSaldo()}";
+            echo "O nome da primeira conta é {$primeiraConta->getNome()} e o saldo é: {$primeiraConta->getSaldo()} <br>";
+            echo "O nome da segunda conta é {$segundaConta->getNome()} e o saldo é: {$segundaConta->getSaldo()} <br>";
         ?>
     </div>
     </div>
