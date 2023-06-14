@@ -55,13 +55,6 @@
         </div>
 
         <div class="row">
-            <?php 
-                foreach($primeiraConta as $chave => $i) {
-                    echo "$chave: $i <br>";
-                }
-            ?>
-        </div>
-        <div class="row">
             <ul class="text-center">
                 <li class="text-center">
                     <?php $primeiraConta->sacar(1000); ?>
@@ -69,8 +62,22 @@
                 <li class="text-center">
                     <?php $primeiraConta->depositar(1000); ?>
                 </li>
+                <li class="text-center">
+                    <?php $primeiraConta->transferir(1000, $segundaConta); ?>
+                </li>
             </ul>
         </div>
+        <div class="row">
+        <?php 
+            echo '<pre>';
+            print_r($primeiraConta);
+            echo '</pre>';
+
+            echo '<pre>';
+            print_r($segundaConta);
+            echo '</pre>';
+        ?>
+    </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>

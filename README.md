@@ -1,9 +1,9 @@
-## Projeto com PHP Orientado a Objetos da Alura
+<h1>Projeto com PHP Orientado a Objetos da Alura</h1>
 
-- Simplificando a orientação a objeto
+## Simplificando a orientação a objeto
 
-Uma variável é um endereço de um objeto, ou seja, uma variável aponta para um objeto.
+- Uma variável é um endereço de um objeto, ou seja, uma variável aponta para um objeto.
 
 <div>
-  <img height="450" src="./src/images/classe.png"/>
+  <img src="./src/images/classe.png"/>
 </div>
