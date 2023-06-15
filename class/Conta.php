@@ -4,12 +4,15 @@ class Conta {
     private int $idConta;
     private string $nome;
     private float $saldo;
+    private static $numeroDeContas = 0;
 
     public function __construct(int $idConta, string $nome) {
         $this->idconta = $idConta;
         $this->nome = $nome;
         $this->saldo = 0;
         $this->verificarNome();
+
+        self::$numeroDeContas++;
     }
 
     public function sacar(float $valorSaque): void {
@@ -62,5 +65,9 @@ class Conta {
             ter pelo menos 5 letras!</p>';
             exit;
         }
+    }
+
+    public static function getNumeroConta() {
+        return self::$numeroDeContas;
     }
 }
