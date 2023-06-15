@@ -15,6 +15,10 @@ class Conta {
         self::$numeroDeContas++;
     }
 
+    public function __destruct() {
+        self::$numeroDeContas--;
+    }
+
     public function sacar(float $valorSaque): void {
         if($valorSaque > $this->saldo) {
             echo "Saldo insuficiente, seu saldo é: $this->saldo";
