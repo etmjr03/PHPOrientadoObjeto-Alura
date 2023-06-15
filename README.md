@@ -2,7 +2,7 @@
 
 ## Simplificando a orientação a objeto
 
-- Uma variável é um endereço de um objeto, ou seja, uma variável aponta para um objeto.
+- Uma variável é um endereço de um objeto (uma referência) que aponta para um objeto (instância).
 
 <div>
   <img src="./src/images/classe.png"/>

@@ -63,4 +63,8 @@ class Conta {
     public static function getNumeroConta() {
         return self::$numeroDeContas;
     }
+
+    public function getEndereco() {
+        return $this->titular->getEnderecoTitular();
+    }
 }

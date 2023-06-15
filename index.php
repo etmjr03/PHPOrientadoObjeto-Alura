@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce</title>
+    <title>Agência web</title>
+    <link rel="shortcut icon" href="./src/images/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
     rel="stylesheet" 
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
@@ -17,7 +18,9 @@
     ?>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">E-commerce Web</a>
+        <a class="navbar-brand" href="#">
+            <img class="logo-img" src="./src/images/logo.png" alt="logo do site">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,7 +30,7 @@
             <a class="nav-link active" aria-current="page" href="#">Início</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Sua Conta</a>
+            <a class="nav-link" href="#">Contas</a>
             </li>
             <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -88,8 +91,10 @@
             print_r($segundaConta);
             echo '</pre>';
 
-            echo "O nome da primeira conta é {$primeiraConta->getNomeTitular()} e o saldo é: {$primeiraConta->getSaldo()} <br>";
+            echo "O nome da primeira conta é {$primeiraConta->getNomeTitular()}, mora em e o saldo é: {$primeiraConta->getSaldo()} <br>";
             echo "O nome da segunda conta é {$segundaConta->getNomeTitular()} e o saldo é: {$segundaConta->getSaldo()} <br>";
+
+            print_r($primeiraConta->getEndereco()->getRua());
 
             $contas = [
                 $primeiraConta,

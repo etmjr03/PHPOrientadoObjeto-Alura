@@ -3,11 +3,13 @@
 class Titular {
     private string $nome;
     private string $idConta;
+    private Endereco $endereco;
 
-    public function __construct(int $idConta, string $nome) {
+    public function __construct(int $idConta, string $nome, Endereco $endereco) {
         $this->idConta = $idConta;
         $this->nome = $nome;
         $this->verificarNome();
+        $this->endereco = $endereco;
     }
 
     private function verificarNome() {
@@ -24,5 +26,9 @@ class Titular {
 
     public function getNome(): string {
         return $this->nome;
+    }
+
+    public function getEnderecoTitular(): Endereco {
+        return $this->endereco;
     }
 }
