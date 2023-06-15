@@ -88,8 +88,8 @@
             print_r($segundaConta);
             echo '</pre>';
 
-            echo "O nome da primeira conta é {$primeiraConta->getNome()} e o saldo é: {$primeiraConta->getSaldo()} <br>";
-            echo "O nome da segunda conta é {$segundaConta->getNome()} e o saldo é: {$segundaConta->getSaldo()} <br>";
+            echo "O nome da primeira conta é {$primeiraConta->getNomeTitular()} e o saldo é: {$primeiraConta->getSaldo()} <br>";
+            echo "O nome da segunda conta é {$segundaConta->getNomeTitular()} e o saldo é: {$segundaConta->getSaldo()} <br>";
 
             $contas = [
                 $primeiraConta,
@@ -101,7 +101,7 @@
 
             foreach($contas as $key) {
                 echo "<li>O usuário da conta com id = {$key->getIdConta()}
-                de nome {$key->getNome()} 
+                de nome {$key->getNomeTitular()} 
                 tem um saldo de = {$key->getSaldo()}<li>";
             }
 

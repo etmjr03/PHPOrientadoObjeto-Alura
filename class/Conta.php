@@ -1,16 +1,13 @@
 <?php
 
 class Conta {
-    private int $idConta;
-    private string $nome;
+    private $titular;
     private float $saldo;
     private static $numeroDeContas = 0;
 
-    public function __construct(int $idConta, string $nome) {
-        $this->idconta = $idConta;
-        $this->nome = $nome;
+    public function __construct(Titular $titular) {
+        $this->titular = $titular;
         $this->saldo = 0;
-        $this->verificarNome();
 
         self::$numeroDeContas++;
     }
@@ -47,12 +44,12 @@ class Conta {
             echo "Transferência realizada com sucesso! <br>";
     }
 
-    public function getIdConta(): int{
-        return $this->idconta;
+    public function getNomeTitular(): string {
+        return $this->titular->getNome();
     }
 
-    public function getNome(): string {
-        return $this->nome;
+    public function getIdConta(): string {
+        return $this->titular->getIdConta();
     }
 
     public function getSaldo(): float {
@@ -61,14 +58,6 @@ class Conta {
 
     public function setSaldo(float $saldo): void {
         $this->saldo = $saldo;
-    }
-
-    private function verificarNome() {
-        if(strlen($this->nome) < 5) {
-            echo '<p class="text-center" style="color: #ee0505"> não é um nome permitido, seu sobrenome e nome deve
-            ter pelo menos 5 letras!</p>';
-            exit;
-        }
     }
 
     public static function getNumeroConta() {

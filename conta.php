@@ -2,12 +2,11 @@
 
 require_once './functions/criar-conta.php';
 require_once './class/Conta.php';
+require_once './class/Titular.php';
 
-$primeiraConta = new Conta(1, 'juninho');
+$primeiraConta = new Conta(new Titular(1, 'juninho'));
 $primeiraConta->depositar(3000);
 
-$segundaConta = new Conta(2, 'juliana');
+$segundaConta = new Conta(new Titular(2, 'juliana'));
 
-$terceiraConta = new Conta(3, 'ana maria');
-
-new Conta(4, 'ana carla');
+$terceiraConta = new Conta(new Titular(3, 'ana maria'));
