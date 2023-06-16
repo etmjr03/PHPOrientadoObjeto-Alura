@@ -4,6 +4,7 @@ require_once './functions/criar-conta.php';
 require_once './class/Conta.php';
 require_once './class/Endereco.php';
 require_once './class/Titular.php';
+require_once './class/Funcionario.php';
 
 $endereco = new Endereco('sao paulo', 'rua tal', '100', 'morumbi');
 
