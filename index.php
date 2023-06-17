@@ -91,7 +91,7 @@
             print_r($segundaConta);
             echo '</pre>';
 
-            echo "O nome da primeira conta é {$primeiraConta->getNomeTitular()}, mora em e o saldo é: {$primeiraConta->getSaldo()} <br>";
+            echo "O nome da primeira conta é {$primeiraConta->getNomeTitular()} e o saldo é: {$primeiraConta->getSaldo()} <br>";
             echo "O nome da segunda conta é {$segundaConta->getNomeTitular()} e o saldo é: {$segundaConta->getSaldo()} <br>";
 
             print_r($primeiraConta->getEndereco()->getRua());

@@ -6,8 +6,10 @@ use Agencia\Modelo\Conta\Titular;
 
 class Conta {
     private $titular;
-    private float $saldo;
+    protected float $saldo;
     private static $numeroDeContas = 0;
+
+    // Conta corrente  = 1, Conta poupança = 2
 
     public function __construct(Titular $titular) {
         $this->titular = $titular;
@@ -21,11 +23,16 @@ class Conta {
     }
 
     public function sacar(float $valorSaque): void {
-        if($valorSaque > $this->saldo) {
+
+        $valorTarifa = $this->percentualTarifa(); 
+        $tarifaSaque = $valorSaque * $valorTarifa;
+        $taxaDeSaque = $valorSaque + $tarifaSaque;
+
+        if($taxaDeSaque > $this->saldo) {
             echo "Saldo insuficiente, seu saldo é: $this->saldo";
             return;
         }
-            $this->saldo -= $valorSaque;
+            $this->saldo -= $taxaDeSaque;
             // echo "Saque realizado com sucesso! Seu saldo atual é: $this->saldo <br>";
     }
 
@@ -70,5 +77,9 @@ class Conta {
 
     public function getEndereco() {
         return $this->titular->getEnderecoTitular();
+    }
+
+    protected function percentualTarifa(): float {
+        return 0.01;
     }
 }
