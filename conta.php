@@ -1,10 +1,15 @@
 <?php 
 
 require_once './functions/criar-conta.php';
-require_once './class/Conta.php';
-require_once './class/Endereco.php';
-require_once './class/Titular.php';
-require_once './class/Funcionario.php';
+require_once './class/Modelo/Conta/Conta.php';
+require_once './class/Modelo/Endereco.php';
+require_once './class/Modelo/Conta/Titular.php';
+require_once './class/Modelo/Funcionario.php';
+
+use Agencia\Modelo\Conta\Conta;
+use Agencia\Modelo\Endereco;
+use Agencia\Modelo\Conta\Titular;
+use Agencia\Modelo\Funcionario;
 
 $endereco = new Endereco('sao paulo', 'rua tal', '100', 'morumbi');
 

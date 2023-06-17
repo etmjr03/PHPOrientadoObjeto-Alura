@@ -1,7 +1,11 @@
 <?php
 
+namespace Agencia\Modelo\Conta;
+
+use Agencia\Modelo\Endereco;
+
 class Titular {
-    private string $nome;
+    protected string $nome;
     private string $idConta;
     private Endereco $endereco;
 
@@ -12,7 +16,7 @@ class Titular {
         $this->endereco = $endereco;
     }
 
-    private function verificarNome() {
+    protected function verificarNome() {
         if(strlen($this->nome) < 5) {
             echo '<p class="text-center" style="color: #ee0505"> não é um nome permitido, seu sobrenome e nome deve
             ter pelo menos 5 letras!</p>';

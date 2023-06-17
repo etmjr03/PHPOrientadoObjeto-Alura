@@ -1,5 +1,9 @@
 <?php
 
+namespace Agencia\Modelo\Conta;
+
+use Agencia\Modelo\Conta\Titular;
+
 class Conta {
     private $titular;
     private float $saldo;

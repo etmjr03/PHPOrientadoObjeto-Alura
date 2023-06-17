@@ -1,5 +1,7 @@
 <?php 
 
+namespace Agencia\Modelo;
+
 class Endereco {
     private string $cidade;
     private string $rua;

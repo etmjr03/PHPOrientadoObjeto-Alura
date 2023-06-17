@@ -109,8 +109,6 @@
                 de nome {$key->getNomeTitular()} 
                 tem um saldo de = {$key->getSaldo()}<li>";
             }
-
-            echo "O número de contas é: " .Conta::getNumeroConta();
         ?>
     </div>
     </div>
