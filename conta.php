@@ -10,18 +10,15 @@ spl_autoload_register(function (string $nomeCompletoDaClasse) {
     }
 });
 
-use Agencia\Modelo\Conta\Conta;
-use Agencia\Modelo\Conta\ContaPoupanca;
-use Agencia\Modelo\Endereco;
-use Agencia\Modelo\Conta\Titular;
-use Agencia\Modelo\Funcionario;
-use Agencia\Modelo\Conta\ContaCorrente;
+use Agencia\Modelo\Conta\{Conta, ContaPoupanca, Titular, ContaCorrente};
+use Agencia\Modelo\{Endereco, Funcionario};
+use Agencia\Modelo\ControlaBonificacao;
 
 $endereco = new Endereco('sao paulo', 'rua tal', '100', 'morumbi');
 
-$juninho = new Titular(1, 'juninho', $endereco);
-$juliana = new Titular(2, 'juliana', $endereco);
-$anaMaria = new Titular(3, 'ana maria', $endereco);
+$juninho = new Titular(1, 'juninho', $endereco, 'programador', 3000);
+$juliana = new Titular(2, 'juliana', $endereco, 'programadora', 3000);
+$anaMaria = new Titular(3, 'ana maria', $endereco, 'UX', 3000);
 
 $primeiraConta = new ContaPoupanca($juninho);
 $primeiraConta->depositar(3000);
@@ -31,3 +28,4 @@ $segundaConta = new ContaPoupanca($juliana, 1);
 $terceiraConta = new ContaPoupanca($anaMaria, 1);
 
 $primeiraConta->sacar(100);
+$quartaConta = new Funcionario(1, 'juninho funcionario', $endereco, 'programador', 3000.50);

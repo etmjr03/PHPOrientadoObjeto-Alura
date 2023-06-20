@@ -15,6 +15,7 @@
         echo '<link rel="stylesheet" href="./style/style.css">';
 
         require_once 'conta.php';
+
     ?>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">

@@ -1,6 +1,6 @@
 <?php 
 
-namespace Agencia\Modelo\conta;
+namespace Agencia\Modelo\Conta;
 
 use Agencia\Modelo\Conta\Conta;   
 

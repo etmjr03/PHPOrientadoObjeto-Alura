@@ -1,0 +1,17 @@
+<?php
+
+namespace Agencia\Modelo;
+
+use Agencia\Modelo\Funcionario;
+
+class ControlaBonificacao {
+    private $totalBonicacao = 0;
+
+    public function adicionaBonificacao(Funcionario $funcionario) {
+        $this->totalBonicacao += $funcionario->calculaBonificacao();
+    }
+
+    public function getTotalBonificacao() {
+        return $this->totalBonicacao;
+    }
+}
