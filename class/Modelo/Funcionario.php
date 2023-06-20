@@ -17,8 +17,8 @@ class Funcionario extends Titular {
         return $this->cargo;
     }
 
-    public function setNome() {
-        $this->verificarNome();
+    public function setNome($nome) {
         $this->nome = $nome;
+        $this->verificarNome();
     }
 }

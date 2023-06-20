@@ -4,7 +4,7 @@ namespace Agencia\Modelo\Conta;
 
 use Agencia\Modelo\Conta\Titular;
 
-class Conta {
+abstract class Conta {
     private $titular;
     protected float $saldo;
     private static $numeroDeContas = 0;
@@ -24,8 +24,7 @@ class Conta {
 
     public function sacar(float $valorSaque): void {
 
-        $valorTarifa = $this->percentualTarifa(); 
-        $tarifaSaque = $valorSaque * $valorTarifa;
+        $tarifaSaque = $valorSaque * $this->percentualTarifa();
         $taxaDeSaque = $valorSaque + $tarifaSaque;
 
         if($taxaDeSaque > $this->saldo) {
@@ -33,7 +32,8 @@ class Conta {
             return;
         }
             $this->saldo -= $taxaDeSaque;
-            // echo "Saque realizado com sucesso! Seu saldo atual é: $this->saldo <br>";
+            echo "Saque realizado com sucesso! Seu saldo atual é: $this->saldo <br>
+            O valor de saque foi: {$tarifaSaque}";
     }
 
     public function depositar(float $valorDeposito): void {
@@ -79,7 +79,6 @@ class Conta {
         return $this->titular->getEnderecoTitular();
     }
 
-    protected function percentualTarifa(): float {
-        return 0.01;
-    }
+    abstract protected function percentualTarifa();
+    
 }

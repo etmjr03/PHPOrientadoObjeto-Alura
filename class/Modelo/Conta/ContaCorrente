@@ -4,8 +4,8 @@ namespace Agencia\Modelo\conta;
 
 use Agencia\Modelo\Conta\Conta;   
 
-class ContaPoupanca extends Conta {
+class ContaCorrente extends Conta {
     protected function percentualTarifa(): float {
-        return 0.01;
+        return 0.05;
     }
 }

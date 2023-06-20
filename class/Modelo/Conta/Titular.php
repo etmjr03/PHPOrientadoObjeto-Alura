@@ -7,9 +7,9 @@ use Agencia\Modelo\Endereco;
 class Titular {
     protected string $nome;
     private string $idConta;
-    private Endereco $endereco;
+    private $endereco;
 
-    public function __construct(int $idConta, string $nome, Endereco $endereco) {
+    public function __construct(int $idConta, string $nome, $endereco) {
         $this->idConta = $idConta;
         $this->nome = $nome;
         $this->verificarNome();
