@@ -110,7 +110,11 @@
                 de nome {$key->getNomeTitular()} 
                 tem um saldo de = {$key->getSaldo()}<li>";
             }
+
         ?>
+    </div>
+    <div class="row arquivo">
+        <?php require_once 'arquivo.php'; ?>
     </div>
     </div>
 
