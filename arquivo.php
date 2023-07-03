@@ -37,8 +37,22 @@ fwrite($arquivoNovoREADME, $novaFrase);
 
 fclose($arquivoNovoREADME); */
 
+// ADICIONANDO FRASE A UM ARQUIVO
 $frase = "\nNova frase adicionada!";
 
-file_put_contents('texte.md', $frase, FILE_APPEND);
+file_put_contents('teste.md', $frase, FILE_APPEND);
 
+// REQUISIÇÃO DE UMA API POR HTTP
 $api = file_get_contents('http://pokeapi.co/api/v2/pokemon/pikachu/');
+
+// LENDO ARQUIVO DENTRO DE UM ZIP
+echo file_get_contents('teste.zip#teste-zip.md');
+
+// APLICANDO FILTRO EM ARQUIVOS
+$arquivoModificado = fopen('texto-maiusculo.md', 'r');
+
+stream_filter_append($arquivoModificado, 'string.toupper');
+
+$conteudo = fread($arquivoModificado, filesize('texto-maiusculo.md'));
+
+echo $conteudo;
