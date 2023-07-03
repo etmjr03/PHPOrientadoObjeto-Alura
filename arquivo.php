@@ -22,3 +22,11 @@ fclose($arquivo); */
 $arquivoNovo = file_get_contents('README.md');
 
 echo $arquivoNovo;
+
+$arquivoNovoAlterado = fopen('teste.md', 'w');
+
+$novaFrase = 'Adicionei uma frase aqui!';
+
+fwrite($arquivoNovoAlterado, $novaFrase);
+
+fclose($arquivoNovoAlterado);
