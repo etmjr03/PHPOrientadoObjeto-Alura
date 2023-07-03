@@ -25,8 +25,20 @@ echo $arquivoNovo;
 
 $arquivoNovoAlterado = fopen('teste.md', 'w');
 
-$novaFrase = 'Adicionei uma frase aqui!';
+$novaFrase = "Adicionei uma frase aqui!";
 
 fwrite($arquivoNovoAlterado, $novaFrase);
 
 fclose($arquivoNovoAlterado);
+
+/* $arquivoNovoREADME = fopen('README.md', 'a');
+
+fwrite($arquivoNovoREADME, $novaFrase);
+
+fclose($arquivoNovoREADME); */
+
+$frase = "\nNova frase adicionada!";
+
+file_put_contents('texte.md', $frase, FILE_APPEND);
+
+$api = file_get_contents('http://pokeapi.co/api/v2/pokemon/pikachu/');

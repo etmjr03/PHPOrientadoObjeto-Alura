@@ -1,0 +1,24 @@
+
+Nova frase adicionada!
+Nova frase adicionada!
+Nova frase adicionada!
+Nova frase adicionada!
+Nova frase adicionada!
+Nova frase adicionada!
+Nova frase adicionada!
+Nova frase adicionada!
+Nova frase adicionada!
+Nova frase adicionada!
+Nova frase adicionada!
+Nova frase adicionada!
+Nova frase adicionada!
+Nova frase adicionada!
+Nova frase adicionada!
+Nova frase adicionada!
+Nova frase adicionada!
+Nova frase adicionada!
+Nova frase adicionada!
+Nova frase adicionada!
+Nova frase adicionada!
+Nova frase adicionada!
+Nova frase adicionada!
